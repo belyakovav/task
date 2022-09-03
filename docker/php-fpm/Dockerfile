@@ -21,7 +21,7 @@ USER www-data
 
 # composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-RUN composer install --no-interaction
+#RUN composer install --no-interaction
 
 CMD php-fpm
 

@@ -626,3 +626,1019 @@ $_SERVER = [
     ]
     'argc' => 1
 ]
+2022-09-05 07:13:00 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: app\models\LoginForm::password in /var/www/vendor/yiisoft/yii2/base/Component.php:209
+Stack trace:
+#0 /var/www/controllers/SiteController.php(83): yii\base\Component->__set('password', '')
+#1 [internal function]: app\controllers\SiteController->actionLogin()
+#2 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('login', Array)
+#5 /var/www/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#6 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2022-09-05 07:13:00 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:13:00 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:13:00 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0ce62c450e2c990aeac90218a275d74d'
+    '_csrf' => '4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => '3125c1d627bf'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=0ce62c450e2c990aeac90218a275d74d; _csrf=4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.22.0.4'
+    'REMOTE_PORT' => '37880'
+    'REMOTE_ADDR' => '172.22.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662361980.2292
+    'REQUEST_TIME' => 1662361980
+    'argv' => [
+        0 => 'r=site%2Flogin'
+    ]
+    'argc' => 1
+]
+2022-09-05 07:13:57 [172.22.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+    in /var/www/views/layouts/main.php:78
+    in /var/www/controllers/SiteController.php:85
+2022-09-05 07:13:57 [172.22.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:13:57 [172.22.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0ce62c450e2c990aeac90218a275d74d'
+    '_csrf' => '4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => '3125c1d627bf'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=0ce62c450e2c990aeac90218a275d74d; _csrf=4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.22.0.4'
+    'REMOTE_PORT' => '52874'
+    'REMOTE_ADDR' => '172.22.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662362037.0397
+    'REQUEST_TIME' => 1662362037
+    'argv' => [
+        0 => 'r=site%2Flogin'
+    ]
+    'argc' => 1
+]
+2022-09-05 07:14:07 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'yii2', 'yii2', NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%user}}')
+#12 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 /var/www/models/User.php(28): yii\db\BaseActiveRecord::findOne(Array)
+#17 /var/www/models/LoginForm.php(70): app\models\User::findByUsername('fwefwe')
+#18 /var/www/models/LoginForm.php(57): app\models\LoginForm->getUser()
+#19 /var/www/controllers/SiteController.php(79): app\models\LoginForm->login()
+#20 [internal function]: app\controllers\SiteController->actionLogin()
+#21 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#22 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#23 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('login', Array)
+#24 /var/www/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#25 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 /var/www/web/index.php(12): yii\base\Application->run()
+#27 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%user}}')
+#10 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 /var/www/models/User.php(28): yii\db\BaseActiveRecord::findOne(Array)
+#15 /var/www/models/LoginForm.php(70): app\models\User::findByUsername('fwefwe')
+#16 /var/www/models/LoginForm.php(57): app\models\LoginForm->getUser()
+#17 /var/www/controllers/SiteController.php(79): app\models\LoginForm->login()
+#18 [internal function]: app\controllers\SiteController->actionLogin()
+#19 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#21 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('login', Array)
+#22 /var/www/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#23 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 /var/www/web/index.php(12): yii\base\Application->run()
+#25 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2022-09-05 07:14:07 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:14:07 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:14:07 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'O2pDWPOTyooUCCAHPx5TUTM4NOEduhWFkD_OtqL5NmZqCXFosKf-82ZnGXJ6aiYCeFRapVLQbeumb4Tuyb9yCQ=='
+    'LoginForm' => [
+        'username' => 'fwefwe'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0ce62c450e2c990aeac90218a275d74d'
+    '_csrf' => '4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => '3125c1d627bf'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=0ce62c450e2c990aeac90218a275d74d; _csrf=4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/index.php?r=site%2Flogin'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '143'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.22.0.4'
+    'REMOTE_PORT' => '52882'
+    'REMOTE_ADDR' => '172.22.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '143'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662362047.7285
+    'REQUEST_TIME' => 1662362047
+    'argv' => [
+        0 => 'r=site%2Flogin'
+    ]
+    'argc' => 1
+]
+2022-09-05 07:17:23 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=loca...', 'yii2', 'yii2', NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('create_user_tab...')
+#14 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#18 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#19 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /var/www/yii(20): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /var/www/vendor/yiisoft/yii2/console/controllers/MigrateController.php(369): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /var/www/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(657): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('create_user_tab...')
+#12 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('create', Array)
+#15 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('create', Array)
+#16 /var/www/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#17 /var/www/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#18 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /var/www/yii(20): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2022-09-05 07:17:23 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => '3125c1d627bf'
+    'PHP_VERSION' => '8.1.0'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PWD' => '/var/www'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'TERM' => 'xterm'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'SHLVL' => '1'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    '_' => '/usr/local/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1662362243.6957
+    'REQUEST_TIME' => 1662362243
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'create_user_table'
+    ]
+    'argc' => 3
+]
+2022-09-05 07:19:49 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'yii2'@'172.22.0.3' (using password: YES) in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=mysq...', 'yii2', 'yii2', NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%user}}')
+#12 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 /var/www/models/User.php(28): yii\db\BaseActiveRecord::findOne(Array)
+#17 /var/www/models/LoginForm.php(70): app\models\User::findByUsername('fwefwe')
+#18 /var/www/models/LoginForm.php(57): app\models\LoginForm->getUser()
+#19 /var/www/controllers/SiteController.php(79): app\models\LoginForm->login()
+#20 [internal function]: app\controllers\SiteController->actionLogin()
+#21 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#22 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#23 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('login', Array)
+#24 /var/www/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#25 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 /var/www/web/index.php(12): yii\base\Application->run()
+#27 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'yii2'@'172.22.0.3' (using password: YES) in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%user}}')
+#10 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 /var/www/models/User.php(28): yii\db\BaseActiveRecord::findOne(Array)
+#15 /var/www/models/LoginForm.php(70): app\models\User::findByUsername('fwefwe')
+#16 /var/www/models/LoginForm.php(57): app\models\LoginForm->getUser()
+#17 /var/www/controllers/SiteController.php(79): app\models\LoginForm->login()
+#18 [internal function]: app\controllers\SiteController->actionLogin()
+#19 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#21 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('login', Array)
+#22 /var/www/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#23 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 /var/www/web/index.php(12): yii\base\Application->run()
+#25 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'yii2'@'172.22.0.3' (using password: YES)
+)
+
+2022-09-05 07:19:49 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:19:49 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:19:49 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'O2pDWPOTyooUCCAHPx5TUTM4NOEduhWFkD_OtqL5NmZqCXFosKf-82ZnGXJ6aiYCeFRapVLQbeumb4Tuyb9yCQ=='
+    'LoginForm' => [
+        'username' => 'fwefwe'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0ce62c450e2c990aeac90218a275d74d'
+    '_csrf' => '4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => '3125c1d627bf'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=0ce62c450e2c990aeac90218a275d74d; _csrf=4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/index.php?r=site%2Flogin'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '143'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.22.0.4'
+    'REMOTE_PORT' => '39498'
+    'REMOTE_ADDR' => '172.22.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '143'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662362389.8392
+    'REQUEST_TIME' => 1662362389
+    'argv' => [
+        0 => 'r=site%2Flogin'
+    ]
+    'argc' => 1
+]
+2022-09-05 07:20:56 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=mysq...', 'yii2', 'yii2', NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%user}}')
+#12 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 /var/www/models/User.php(28): yii\db\BaseActiveRecord::findOne(Array)
+#17 /var/www/models/LoginForm.php(70): app\models\User::findByUsername('fwefwe')
+#18 /var/www/models/LoginForm.php(57): app\models\LoginForm->getUser()
+#19 /var/www/controllers/SiteController.php(79): app\models\LoginForm->login()
+#20 [internal function]: app\controllers\SiteController->actionLogin()
+#21 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#22 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#23 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('login', Array)
+#24 /var/www/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#25 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 /var/www/web/index.php(12): yii\base\Application->run()
+#27 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Connection refused in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%user}}')
+#10 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 /var/www/models/User.php(28): yii\db\BaseActiveRecord::findOne(Array)
+#15 /var/www/models/LoginForm.php(70): app\models\User::findByUsername('fwefwe')
+#16 /var/www/models/LoginForm.php(57): app\models\LoginForm->getUser()
+#17 /var/www/controllers/SiteController.php(79): app\models\LoginForm->login()
+#18 [internal function]: app\controllers\SiteController->actionLogin()
+#19 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#21 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('login', Array)
+#22 /var/www/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#23 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 /var/www/web/index.php(12): yii\base\Application->run()
+#25 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection refused
+)
+
+2022-09-05 07:20:56 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:20:56 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:20:56 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'O2pDWPOTyooUCCAHPx5TUTM4NOEduhWFkD_OtqL5NmZqCXFosKf-82ZnGXJ6aiYCeFRapVLQbeumb4Tuyb9yCQ=='
+    'LoginForm' => [
+        'username' => 'fwefwe'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0ce62c450e2c990aeac90218a275d74d'
+    '_csrf' => '4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => '3125c1d627bf'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=0ce62c450e2c990aeac90218a275d74d; _csrf=4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/index.php?r=site%2Flogin'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '143'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.22.0.4'
+    'REMOTE_PORT' => '39116'
+    'REMOTE_ADDR' => '172.22.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '143'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662362456.271
+    'REQUEST_TIME' => 1662362456
+    'argv' => [
+        0 => 'r=site%2Flogin'
+    ]
+    'argc' => 1
+]
+2022-09-05 07:21:15 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'yii2'@'172.22.0.3' (using password: YES) in /var/www/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=mysq...', 'yii2', 'yii2', NULL)
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#8 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%user}}')
+#12 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 /var/www/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 /var/www/models/User.php(28): yii\db\BaseActiveRecord::findOne(Array)
+#17 /var/www/models/LoginForm.php(70): app\models\User::findByUsername('fwefwe')
+#18 /var/www/models/LoginForm.php(57): app\models\LoginForm->getUser()
+#19 /var/www/controllers/SiteController.php(79): app\models\LoginForm->login()
+#20 [internal function]: app\controllers\SiteController->actionLogin()
+#21 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#22 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#23 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('login', Array)
+#24 /var/www/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#25 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 /var/www/web/index.php(12): yii\base\Application->run()
+#27 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'yii2'@'172.22.0.3' (using password: YES) in /var/www/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /var/www/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /var/www/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /var/www/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /var/www/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#6 /var/www/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /var/www/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%user}}')
+#10 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 /var/www/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 /var/www/models/User.php(28): yii\db\BaseActiveRecord::findOne(Array)
+#15 /var/www/models/LoginForm.php(70): app\models\User::findByUsername('fwefwe')
+#16 /var/www/models/LoginForm.php(57): app\models\LoginForm->getUser()
+#17 /var/www/controllers/SiteController.php(79): app\models\LoginForm->login()
+#18 [internal function]: app\controllers\SiteController->actionLogin()
+#19 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#20 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#21 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('login', Array)
+#22 /var/www/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#23 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 /var/www/web/index.php(12): yii\base\Application->run()
+#25 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'yii2'@'172.22.0.3' (using password: YES)
+)
+
+2022-09-05 07:21:15 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:21:15 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:21:14 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'O2pDWPOTyooUCCAHPx5TUTM4NOEduhWFkD_OtqL5NmZqCXFosKf-82ZnGXJ6aiYCeFRapVLQbeumb4Tuyb9yCQ=='
+    'LoginForm' => [
+        'username' => 'fwefwe'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0ce62c450e2c990aeac90218a275d74d'
+    '_csrf' => '4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => '3125c1d627bf'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=0ce62c450e2c990aeac90218a275d74d; _csrf=4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/index.php?r=site%2Flogin'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '143'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.22.0.4'
+    'REMOTE_PORT' => '36398'
+    'REMOTE_ADDR' => '172.22.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '143'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662362474.9901
+    'REQUEST_TIME' => 1662362474
+    'argv' => [
+        0 => 'r=site%2Flogin'
+    ]
+    'argc' => 1
+]
+2022-09-05 07:22:31 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php:442
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#1 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#2 /var/www/vendor/yiisoft/yii2/db/ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#3 /var/www/vendor/yiisoft/yii2/db/BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#4 /var/www/models/User.php(28): yii\db\BaseActiveRecord::findOne(Array)
+#5 /var/www/models/LoginForm.php(70): app\models\User::findByUsername('fwefwe')
+#6 /var/www/models/LoginForm.php(57): app\models\LoginForm->getUser()
+#7 /var/www/controllers/SiteController.php(79): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('login', Array)
+#12 /var/www/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#13 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2022-09-05 07:22:31 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:22:31 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 07:22:31 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'O2pDWPOTyooUCCAHPx5TUTM4NOEduhWFkD_OtqL5NmZqCXFosKf-82ZnGXJ6aiYCeFRapVLQbeumb4Tuyb9yCQ=='
+    'LoginForm' => [
+        'username' => 'fwefwe'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0ce62c450e2c990aeac90218a275d74d'
+    '_csrf' => '4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => '3125c1d627bf'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=0ce62c450e2c990aeac90218a275d74d; _csrf=4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/index.php?r=site%2Flogin'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '143'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.22.0.4'
+    'REMOTE_PORT' => '55494'
+    'REMOTE_ADDR' => '172.22.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '143'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662362551.4029
+    'REQUEST_TIME' => 1662362551
+    'argv' => [
+        0 => 'r=site%2Flogin'
+    ]
+    'argc' => 1
+]

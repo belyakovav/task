@@ -6,26 +6,35 @@ use yii\db\ActiveRecord;
 
 class User extends ActiveRecord implements \yii\web\IdentityInterface
 {
-    public $id;
-    public $username;
+    public static function tableName ()
+    {
+        return 'user';
+    }
 
-    /**
-     * {@inheritdoc}
-     */
+    public function rules()
+    {
+      return [
+              [['email','hash'], 'safe'],
+              ['username', 'trim']
+      ];
+    }
+
+    public function attributeLabels()
+    {
+        return [
+            'username' => 'Имя пользователя',
+        ];
+    }
+
     public static function findIdentity($id)
     {
         return static::findOne($id);
     }
 
-    /**
-     * Finds user by username
-     *
-     * @param string $username
-     * @return static|null
-     */
-    public static function findByUsername($username)
+
+    public static function findByUserHash($email)
     {
-        return static::findOne(['username'=>$username]);
+        return static::findOne(['hash'=>md5($email)]);
     }
 
     /**
@@ -36,16 +45,6 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
         return $this->id;
     }
 
-    /**
-     * Validates password
-     *
-     * @param string $password password to validate
-     * @return bool if password provided is valid for current user
-     */
-    public function validatePassword($password)
-    {
-        return $this->password === $password;
-    }
 
     public static function findIdentityByAccessToken($token, $type = null)
     {

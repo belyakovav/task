@@ -2,73 +2,37 @@
 
 namespace app\controllers;
 
+use app\models\User;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
-use app\models\ContactForm;
 
-class SiteController extends Controller
+class SiteController extends AppController
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::class,
-                'only' => ['logout'],
-                'rules' => [
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::class,
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function actions()
-    {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
-        ];
-    }
 
-    /**
-     * Displays homepage.
-     *
-     * @return string
-     */
     public function actionIndex()
     {
         return $this->render('index');
     }
 
-    /**
-     * Login action.
-     *
-     * @return Response|string
-     */
+    public function actionCreateUser($email)
+    {
+        $user = new User();
+        $user->email=$email;
+//        var_dump($email);die;
+        $user->hash=md5($email);
+        if($user->save()){
+            $model = new LoginForm();
+            $model->email = $email;
+            $model->login();
+            return $this->render('/users/update', compact(['model']));
+        }
+    }
+
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
@@ -76,11 +40,14 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+        if ($model->load(Yii::$app->request->post())) {
+            if($model->login()){
+                return $this->redirect('/users/update');
+            }else{
+                $this->actionCreateUser($model->email);
+            }
         }
 
-//        $model->password = '';
         return $this->render('login', [
             'model' => $model,
         ]);
@@ -91,6 +58,7 @@ class SiteController extends Controller
      *
      * @return Response
      */
+
     public function actionLogout()
     {
         Yii::$app->user->logout();

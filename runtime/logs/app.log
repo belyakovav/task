@@ -1,0 +1,628 @@
+2022-09-05 06:17:41 [172.21.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: yii\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/vendor/yiisoft/yii2/web/Request.php:1715
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/web/Request.php(1697): yii\web\Request->loadCookies()
+#1 /var/www/vendor/yiisoft/yii2/web/User.php(593): yii\web\Request->getCookies()
+#2 /var/www/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/vendor/yiisoft/yii2/web/User.php(727): yii\web\User->loginByCookie()
+#4 /var/www/vendor/yiisoft/yii2/web/User.php(199): yii\web\User->renewAuthStatus()
+#5 /var/www/vendor/yiisoft/yii2/web/User.php(367): yii\web\User->getIdentity()
+#6 /var/www/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getIsGuest()
+#7 /var/www/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(83): yii\base\Component->__get('isGuest')
+#8 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#11 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#12 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#13 /var/www/vendor/yiisoft/yii2-debug/src/Module.php(255): yii\BaseYii::createObject(Array)
+#14 /var/www/vendor/yiisoft/yii2-debug/src/Module.php(226): yii\debug\Module->initPanels()
+#15 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#16 /var/www/vendor/yiisoft/yii2/base/Module.php(161): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#18 /var/www/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs(Array)
+#19 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#20 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#21 /var/www/vendor/yiisoft/yii2/base/Module.php(445): yii\BaseYii::createObject(Array, Array)
+#22 /var/www/vendor/yiisoft/yii2/base/Application.php(313): yii\base\Module->getModule('debug')
+#23 /var/www/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#24 /var/www/vendor/yiisoft/yii2/base/Application.php(271): yii\web\Application->bootstrap()
+#25 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#26 /var/www/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct(Array)
+#27 /var/www/web/index.php(12): yii\base\Application->__construct(Array)
+#28 {main}
+2022-09-05 06:17:41 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'e949e54aa3c1'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'cross-site'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.4'
+    'REMOTE_PORT' => '39518'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662358661.5452
+    'REQUEST_TIME' => 1662358661
+    'argv' => []
+    'argc' => 0
+]
+2022-09-05 06:20:21 [172.21.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/views/layouts/main.php:80
+    in /var/www/controllers/SiteController.php:64
+2022-09-05 06:20:21 [172.21.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-09-05 06:20:21 [172.21.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e949e54aa3c1'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'cross-site'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.4'
+    'REMOTE_PORT' => '32820'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662358821.1932
+    'REQUEST_TIME' => 1662358821
+    'argv' => []
+    'argc' => 0
+]
+2022-09-05 06:20:28 [172.21.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+    in /var/www/views/layouts/main.php:80
+    in /var/www/controllers/SiteController.php:126
+2022-09-05 06:20:28 [172.21.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-09-05 06:20:28 [172.21.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/about'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0ce62c450e2c990aeac90218a275d74d'
+    '_csrf' => '4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e949e54aa3c1'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=0ce62c450e2c990aeac90218a275d74d; _csrf=4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.4'
+    'REMOTE_PORT' => '32854'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Fabout'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fabout'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662358828.1854
+    'REQUEST_TIME' => 1662358828
+    'argv' => [
+        0 => 'r=site%2Fabout'
+    ]
+    'argc' => 1
+]
+2022-09-05 06:20:29 [172.21.0.1][-][0ce62c450e2c990aeac90218a275d74d][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Either GD PHP extension with FreeType support or ImageMagick PHP extension with PNG support is required. in /var/www/vendor/yiisoft/yii2/captcha/Captcha.php:175
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/captcha/Captcha.php(94): yii\captcha\Captcha::checkRequirements()
+#1 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\captcha\Captcha->init()
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#4 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('yii\\captcha\\Cap...', Array, Array)
+#5 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\captcha\\Cap...', Array, Array)
+#6 /var/www/vendor/yiisoft/yii2/base/Widget.php(143): yii\BaseYii::createObject(Array)
+#7 /var/www/vendor/yiisoft/yii2/widgets/ActiveField.php(795): yii\base\Widget::widget(Array)
+#8 /var/www/views/site/contact.php(55): yii\widgets\ActiveField->widget('yii\\captcha\\Cap...', Array)
+#9 /var/www/vendor/yiisoft/yii2/base/View.php(347): require('/var/www/views/...')
+#10 /var/www/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/views/...', Array)
+#11 /var/www/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/views/...', Array, Object(app\controllers\SiteController))
+#12 /var/www/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('contact', Array, Object(app\controllers\SiteController))
+#13 /var/www/controllers/SiteController.php(115): yii\base\Controller->render('contact', Array)
+#14 [internal function]: app\controllers\SiteController->actionContact()
+#15 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('contact', Array)
+#18 /var/www/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/contact', Array)
+#19 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/web/index.php(12): yii\base\Application->run()
+#21 {main}
+2022-09-05 06:20:29 [172.21.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-09-05 06:20:29 [172.21.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.21.0.1
+2022-09-05 06:20:29 [172.21.0.1][-][0ce62c450e2c990aeac90218a275d74d][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0ce62c450e2c990aeac90218a275d74d'
+    '_csrf' => '4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => 'e949e54aa3c1'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=0ce62c450e2c990aeac90218a275d74d; _csrf=4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/index.php?r=site%2Fabout'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.21.0.4'
+    'REMOTE_PORT' => '32842'
+    'REMOTE_ADDR' => '172.21.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662358829.469
+    'REQUEST_TIME' => 1662358829
+    'argv' => [
+        0 => 'r=site%2Fcontact'
+    ]
+    'argc' => 1
+]
+2022-09-05 06:44:59 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Either GD PHP extension with FreeType support or ImageMagick PHP extension with PNG support is required. in /var/www/vendor/yiisoft/yii2/captcha/Captcha.php:175
+Stack trace:
+#0 /var/www/vendor/yiisoft/yii2/captcha/Captcha.php(94): yii\captcha\Captcha::checkRequirements()
+#1 /var/www/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\captcha\Captcha->init()
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 /var/www/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#4 /var/www/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('yii\\captcha\\Cap...', Array, Array)
+#5 /var/www/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\captcha\\Cap...', Array, Array)
+#6 /var/www/vendor/yiisoft/yii2/base/Widget.php(143): yii\BaseYii::createObject(Array)
+#7 /var/www/vendor/yiisoft/yii2/widgets/ActiveField.php(795): yii\base\Widget::widget(Array)
+#8 /var/www/views/site/contact.php(55): yii\widgets\ActiveField->widget('yii\\captcha\\Cap...', Array)
+#9 /var/www/vendor/yiisoft/yii2/base/View.php(347): require('/var/www/views/...')
+#10 /var/www/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/views/...', Array)
+#11 /var/www/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/views/...', Array, Object(app\controllers\SiteController))
+#12 /var/www/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render('contact', Array, Object(app\controllers\SiteController))
+#13 /var/www/controllers/SiteController.php(115): yii\base\Controller->render('contact', Array)
+#14 [internal function]: app\controllers\SiteController->actionContact()
+#15 /var/www/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('contact', Array)
+#18 /var/www/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/contact', Array)
+#19 /var/www/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/web/index.php(12): yii\base\Application->run()
+#21 {main}
+2022-09-05 06:44:59 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 06:44:59 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 06:44:59 [172.22.0.1][-][0ce62c450e2c990aeac90218a275d74d][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0ce62c450e2c990aeac90218a275d74d'
+    '_csrf' => '4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => '3125c1d627bf'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=0ce62c450e2c990aeac90218a275d74d; _csrf=4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/index.php?r=site%2Fabout'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.22.0.4'
+    'REMOTE_PORT' => '57658'
+    'REMOTE_ADDR' => '172.22.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662360299.1691
+    'REQUEST_TIME' => 1662360299
+    'argv' => [
+        0 => 'r=site%2Fcontact'
+    ]
+    'argc' => 1
+]
+2022-09-05 06:45:06 [172.22.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+    in /var/www/views/layouts/main.php:80
+    in /var/www/controllers/SiteController.php:64
+2022-09-05 06:45:06 [172.22.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 06:45:06 [172.22.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0ce62c450e2c990aeac90218a275d74d'
+    '_csrf' => '4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => '3125c1d627bf'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=0ce62c450e2c990aeac90218a275d74d; _csrf=4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.22.0.4'
+    'REMOTE_PORT' => '57658'
+    'REMOTE_ADDR' => '172.22.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662360305.9965
+    'REQUEST_TIME' => 1662360305
+    'argv' => []
+    'argc' => 0
+]
+2022-09-05 06:45:08 [172.22.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+    in /var/www/views/layouts/main.php:80
+    in /var/www/controllers/SiteController.php:85
+2022-09-05 06:45:08 [172.22.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.22.0.1
+2022-09-05 06:45:08 [172.22.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0ce62c450e2c990aeac90218a275d74d'
+    '_csrf' => '4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HOSTNAME' => '3125c1d627bf'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'SHLVL' => '2'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=Docker'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_VERSION' => '8.1.0'
+    'GPG_KEYS' => '528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz.asc'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.1.0.tar.xz'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev dpkg 		file 		g++ 		gcc 		libc-dev 		make 		pkgconf 		re2c'
+    'PWD' => '/var/www'
+    'PHP_SHA256' => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=0ce62c450e2c990aeac90218a275d74d; _csrf=4b4cc8b3e978af37e0f60570661a51397fbacdf2e77040cca7cc3dbca4a7e718a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Qc20C44yro9uEtuSKlnDOjxn6PJXkFDo%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.811 Yowser/2.5 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Yandex\";v=\"22\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'SCRIPT_FILENAME' => '/var/www/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => ''
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.22.0.4'
+    'REMOTE_PORT' => '50814'
+    'REMOTE_ADDR' => '172.22.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.23.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1662360308.2844
+    'REQUEST_TIME' => 1662360308
+    'argv' => [
+        0 => 'r=site%2Flogin'
+    ]
+    'argc' => 1
+]

@@ -19,17 +19,18 @@ class SiteController extends AppController
         return $this->render('index');
     }
 
-    public function actionCreateUser($email)
+    public function actionCreateUser($arr)
     {
         $user = new User();
-        $user->email=$email;
+        $user->email=$arr['email'];
 //        var_dump($email);die;
-        $user->hash=md5($email);
+        $user->hash=md5($arr['email']);
+        $user->tmp_hash=md5($arr['tmp_hash']);
         if($user->save()){
             $model = new LoginForm();
-            $model->email = $email;
+            $model->email = $arr['email'];
             $model->login();
-            return $this->render('/users/update', compact(['model']));
+            return $this->render('/users/update', compact(['user']));
         }
     }
 
@@ -44,7 +45,22 @@ class SiteController extends AppController
             if($model->login()){
                 return $this->redirect('/users/update');
             }else{
-                $this->actionCreateUser($model->email);
+                $tmp_hash = md5(date('Y.m.d H:s').$model->email);
+                $message = 'Для входа нажмите <a href="'.$tmp_hash.'">Войти</a>';
+                Yii::$app->mailer->compose()
+                ->setFrom(['test@iro.51' => 'test'])
+                    ->setTo($model->email)
+                    ->setSubject('Вход на сайт')
+                    ->setTextBody($message)
+                    ->setHtmlBody($message)
+                    ->send();
+
+                $arr=[
+                    'email'=>$model->email,
+                    'tmp_hash'=>$tmp_hash
+                ];
+
+//                $this->actionCreateUser($arr);
             }
         }
 

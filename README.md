@@ -11,4 +11,4 @@
 
 Далее, запустите миграцию yii migration.
 
-Авторизация site\login
+Авторизация http:\\localhost\site\login
